@@ -28,3 +28,8 @@ def combine_features(row):
 
 
 df["combined_features"] = df.apply(combine_features,axis=1)
+# print(df["combined_features"].head())
+
+cv = CountVectorizer()
+
+count_matrix = cv.fit_transform(df["combined_features"])
