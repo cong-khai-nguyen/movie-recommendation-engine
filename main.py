@@ -17,7 +17,7 @@ def get_index_from_title(title):
 # Content-based features
 features = ['keywords','cast','genres','director']
 
-# Fill all the null values in each feature with empty string to apply combine_features later
+# Fill all the nan values in each feature with empty string to apply combine_features later
 for feature in features:
 	df[feature] = df[feature].fillna('')
 
