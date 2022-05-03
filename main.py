@@ -43,6 +43,7 @@ sorted_similar_movies = sorted(similar_movies, key = lambda x:x[1], reverse = Tr
 
 print("Movies similar to", movie_user_likes, ":\n")
 for x, movie in enumerate(sorted_similar_movies):
-	print(get_title_from_index(movie[0]))
+	if x != 0:
+		print(get_title_from_index(movie[0]))
 	if x > 50:
 		break
