@@ -35,3 +35,5 @@ cosine_sim = cosine_similarity(count_matrix)
 # print(cosine_sim)
 movie_user_likes = "Avatar"
 
+movie_index = get_index_from_title(movie_user_likes)
+
