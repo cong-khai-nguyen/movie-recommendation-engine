@@ -45,5 +45,5 @@ print("Movies similar to", movie_user_likes, ":\n")
 for x, movie in enumerate(sorted_similar_movies):
 	if x != 0:
 		print(get_title_from_index(movie[0]))
-	if x == 49:
+	if x == 50:
 		break
