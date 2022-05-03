@@ -22,15 +22,16 @@ for feature in features:
 	df[feature] = df[feature].fillna('')
 
 def combine_features(row):
-	try:
-		return row['keywords'] +" "+row['cast']+" "+row["genres"]+" "+row["director"]
-	except:
-		print("Error:", row)
+	return row['keywords'] +" "+row['cast']+" "+row["genres"]+" "+row["director"]
 
 
 df["combined_features"] = df.apply(combine_features,axis=1)
 # print(df["combined_features"].head())
 
 cv = CountVectorizer()
-
 count_matrix = cv.fit_transform(df["combined_features"])
+
+cosine_sim = cosine_similarity(count_matrix)
+# print(cosine_sim)
+movie_user_likes = "Avatar"
+
