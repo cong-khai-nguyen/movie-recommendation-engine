@@ -5,6 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 df = pd.read_csv("data/movie_dataset.csv")
 # print(df.info())
+# print(df.columns)
 # Helper functions
 # Get the title of the movie from its index in dataframe
 def get_title_from_index(index):
@@ -16,7 +17,7 @@ def get_index_from_title(title):
 # Content-based features
 features = ['keywords','cast','genres','director']
 
-# Fill all the null values in each feature with empty string to easily filter the data later
+# Fill all the null values in each feature with empty string to apply combine_features later
 for feature in features:
 	df[feature] = df[feature].fillna('')
 
